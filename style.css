@@ -1,0 +1,72 @@
+@import "reset.css";
+
+html {
+    font-size: 10px;
+    background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+    background-size: cover;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-color: white;
+}
+
+#container {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choices {
+    padding:0.35em 1.2em;
+    border:0.1em solid #3d3a3a;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300; 
+    background-color: transparent;
+    color:#3d3a3a;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.choices:hover {
+  transform: scale(1.1);
+  color: #3d3a3a;
+  background-color: white;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+#result {
+    margin: 2em;
+}
+
+.shake {
+    animation: linear 0.3s 1;
+    animation-name: shake;
+}
+
+@keyframes shake {
+    33% {
+        transform: rotate(-10deg);
+    }
+    66% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
