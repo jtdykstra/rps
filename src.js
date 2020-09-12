@@ -12,11 +12,32 @@ function buttonHandler(e) {
     let result = playRound(e.srcElement.innerText, computerPlay());
 
     const resultText = document.querySelector('#result');
+    
+    resultText.classList.remove(...resultText.classList);
 
-    resultText.classList.remove('shake');
+    let resultEffect = 'none';
+   
+    if (result.indexOf("lose") != -1)
+    {
+        resultText.style.color = 'red';
+        resultEffect = 'shake';
+    }
+    if (result.indexOf("win") != -1)
+    {
+        resultText.style.color = 'green';
+        resultEffect = 'grow';
+    }
+    if (result.indexOf("Tie") != -1)
+    {
+        resultText.style.color = 'black';
+        // no result effect for tie
+    }
+
+    console.log(resultEffect);
+
     // trigger DOM reflow
     void resultText.offsetWidth;
-    resultText.classList.add('shake'); 
+    resultText.classList.add(resultEffect); 
     resultText.innerText = result;
 }
 

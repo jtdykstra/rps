@@ -70,3 +70,17 @@ body,html {
         transform: rotate(0deg);
     }
 }
+
+.grow {
+    animation: linear 0.3s 1;
+    animation-name: grow;
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
